@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 포트폴리오</title>
+
+    <style>
+        body { margin: 0; }
+
+        header { background: #bab3ff; border: 1px solid #a3a3a3; border-radius: 10px; }
+
+        nav { padding: 0px 7px; }
+        nav ul { display: flex; justify-content: right;}
+        nav ul li { float:left; padding-right: 10px; list-style: none; }
+
+        nav ul li a { padding: 5px; 
+                      text-decoration: none; /* 텍스트 밑줄 제거를 위해 사용 */
+                      color: white; }      /* 폰트 색 변경 */
+        nav ul li a:hover { background: white; border-radius: 5px;
+                            color: #bab3ff; text-decoration: underline; }
+		
+		.intro-section { display: flex; align-items: center; justify-content: center;
+                         padding: 5%; background-color: #dbd2e6;}
+		.intro-section img { height: 260px; background-color: #d6d9dc;
+            border: 3px solid #c8cebd; border-radius: 50%; }
+        .intro-section .msg { height: 100px; line-height: 100px; 
+            margin-left: 5%; font-size: 30px; color: #4d4d4c; }
+		
+        .about-section { text-align: center; }
+        .about-section h2 { text-align: center; font-size: 40px; }
+        .about-contents { display: flex; align-items: center; justify-content: center;}
+        .about-contents th { width: 65px; }
+        .about-contents th, .about-contents td  { text-align:left; }
+
+        .project-section { display: grid;
+                    align-items: center;
+                    justify-items: center;
+                  }
+        
+        @media (max-width: 484px) { 
+            .project-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (min-width: 485px) and (max-width: 749px) {
+            .project-section {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (min-width: 750px) and (max-width: 999px) {
+            .project-section {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        
+        @media (min-width: 1000px) {
+            .project-section {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        } 
+        
+        .prj-grid img { height: 100px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro-section">
+				<img src="assets/images/sim.png">
+                <div class="msg">
+                    <!-- 글자 움직이는 태그 : marquee -->
+				    <marquee>안녕하세요. 심재윤입니다.</marquee>
+                </div>
+			</div>
+        </section>
+        <section id="about" class="about-section">
+            <h2>About.</h2>
+            <div class="about-contents">
+                <img src="" />
+                <table>
+                    <tr>
+                        <th>이름</th>
+                        <td>심재윤</td>
+                    </tr>
+                    <tr>
+                        <th>거주지</th>
+                        <td>서울</td>
+                    </tr>
+                    <tr>
+                        <th>전공</th>
+                        <td>식품영양학과</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <br>
+        <h2>프로젝트</h2>
+        <section id="project" class="project-section">
+            <div class="prj-grid">
+                <img src="assets/images/project-img.png" alt="프로젝트 이미지" />
+                <div class="prj-info">
+                    <h3>프로젝트명</h3>
+                    <p>프로젝트 기간: 2023-12-12 ~ 2023-12-18</p>
+                    <p>
+                        프로젝트 설명: 유튜브 클론 코딩
+                    </p>
+                    <a href="https://smjae96.github.io/">프로젝트 보기</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="contact" class="contact-section"></div>
+    </footer>
+</body>
+</html>
+
